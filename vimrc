@@ -250,3 +250,26 @@ cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" Autocomplete for braces
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
+
+"Remove trailing whitespaces on save
+autocmd BufWritePre *.js :%s/\s\+$//e
+
+"
+"powerline configuration
+"http://askubuntu.com/a/283909/369339
+""
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
